@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+
+  oracle:
+    image: gvenzl/oracle-xe:21-slim        
+    container_name: oracledatabase    
+    ports:    
+      - 1521:1521
+    environment:      
+      - "ORACLE_PASSWORD=root"
+      - "ORACLE_DATABASE=eis"
+      - "APP_USER=dbuser"
+      - "APP_USER_PASSWORD=dbuser"
