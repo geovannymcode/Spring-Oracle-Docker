@@ -4,7 +4,7 @@ server:
 # Oracle #
 spring:
   datasource:
-    url: jdbc:oracle:thin:@localhost:1521:xe 
+    url: jdbc:oracle:thin:@localhost:1521:xe
     username: system
     password: root
     driverClassName: oracle.jdbc.driver.OracleDriver
@@ -14,4 +14,4 @@ spring:
         dialect: org.hibernate.dialect.Oracle12cDialect
     show-sql: true
     hibernate:
-      ddl-auto: update  
+      ddl-auto: update

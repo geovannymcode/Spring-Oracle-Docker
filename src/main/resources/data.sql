@@ -1,2 +1,0 @@
-INSERT INTO ESTUDIANTES VALUES (1, 'GEOVANNY', 'MENDOZA', 'Calle 41 San Jose',28,'Barranquilla', 'Colombia');
-INSERT INTO ESTUDIANTES VALUES (2, 'OMAR', 'BERROTERAN', 'Bo grenada Casa C22',27,'Managua', 'Nicaragua');
