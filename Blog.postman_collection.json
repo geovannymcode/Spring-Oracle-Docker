@@ -34,7 +34,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 2,\n    \"nombres\": \"Omar\",\n    \"apellidos\": \"Berroteran\",\n    \"ciudad\": \"Managua\",\n    \"direccion\": \"Bo grenada Casa C22\",\n    \"pais\": \"Nicaragua\",\n    \"edad\": 32 \n}\n",
+							"raw": "{\n    \"nombres\": \"Tzeitel\",\n    \"apellidos\": \"Zuleta\",\n    \"ciudad\": \"La Paz\",\n    \"direccion\": \"Calle 12 # 20-12\",\n    \"pais\": \"Colombia\",\n    \"edad\": 28 \n}\n",
 							"options": {
 								"raw": {
 									"language": "json"

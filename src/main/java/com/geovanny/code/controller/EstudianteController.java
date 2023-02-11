@@ -1,5 +1,6 @@
 package com.geovanny.code.controller;
 
+import com.geovanny.code.model.Estudiante;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.geovanny.code.exception.ModeloNotFoundException;
-import com.geovanny.code.model.Estudiante;
 import com.geovanny.code.service.EstudianteService;
 
 import java.util.ArrayList;
@@ -28,14 +28,11 @@ public class EstudianteController {
 	@Autowired
 	private EstudianteService service;
 	
-
-	
 	@GetMapping(produces = "application/json")
 	public ResponseEntity<List<Estudiante>> listar() {
 		List<Estudiante> estudiantes = new ArrayList<>();
 		 estudiantes = service.findEstudianteAll();
 		return new ResponseEntity<List<Estudiante>>(estudiantes, HttpStatus.OK);
-
 	}
 	
 	@PostMapping
@@ -46,7 +43,7 @@ public class EstudianteController {
 	
 	@GetMapping("/{id}")
 	public ResponseEntity<Estudiante> getEstudianteById(@PathVariable("id") Long id){
-		Estudiante estudiante= service.getEstudiante(id).orElseThrow(() -> new ModeloNotFoundException("Estudiante no encontrado $id"));
+		Estudiante estudiante = service.getEstudiante(id).orElseThrow(() -> new ModeloNotFoundException("Estudiante no encontrado $id"));
 		return new ResponseEntity<Estudiante>(estudiante, HttpStatus.OK);
 	}
 
@@ -57,8 +54,8 @@ public class EstudianteController {
 	}
 
 	@PutMapping("/{id}")
-	public Estudiante updateEstudiante(@PathVariable("id") Long id, @Valid @RequestBody Estudiante estudiante){
-		Estudiante dbestudiante =  service.getEstudiante(id).orElseThrow(() -> new ModeloNotFoundException("Estudiante No enocntrado"));
+	public Estudiante updateEstudiante(@PathVariable("id") Long id, @Valid @RequestBody Estudiante estudiante) {
+		Estudiante dbestudiante = service.getEstudiante(id).orElseThrow(() -> new ModeloNotFoundException("Estudiante No enocntrado"));
 		dbestudiante.setNombres(estudiante.getNombres());
 		dbestudiante.setApellidos(estudiante.getApellidos());
 		dbestudiante.setDireccion(estudiante.getDireccion());
@@ -67,5 +64,4 @@ public class EstudianteController {
 		dbestudiante.setPais(estudiante.getPais());
 		return service.updateEstudiante(dbestudiante);
 	}
-		
 }

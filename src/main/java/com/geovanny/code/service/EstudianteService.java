@@ -1,9 +1,9 @@
 package com.geovanny.code.service;
 
+import com.geovanny.code.model.Estudiante;
+
 import java.util.List;
 import java.util.Optional;
-
-import com.geovanny.code.model.Estudiante;
 
 public interface EstudianteService {
 	

@@ -3,10 +3,10 @@ package com.geovanny.code.service;
 import java.util.List;
 import java.util.Optional;
 
+import com.geovanny.code.model.Estudiante;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.geovanny.code.model.Estudiante;
 import com.geovanny.code.repository.EstudianteRepositorio;
 
 @Service
@@ -27,7 +27,6 @@ public class EstudianteServiceImpl implements EstudianteService{
 
 	@Override
 	public Estudiante updateEstudiante(Estudiante estudiante) {
-		
 		return estudianteRepositorio.save(estudiante);
 	}
 
